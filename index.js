@@ -1,5 +1,31 @@
 let pokemon;
 
+console.log("s")
+
+fetch("./lists.json")
+    .then(res => res.json())
+    .then(data => {
+        let list;
+
+        for (let d of data) {
+            list = d;
+        }
+
+        if (!list) {
+            console.log("No match found");
+            return;
+        }
+
+        const dataList = document.getElementById("pokeList")
+
+        for (let [key, value] of Object.entries(list)) {
+            const poke = document.createElement("option")
+            poke.value = key
+
+            dataList.appendChild(poke)
+        }
+    });
+
 document.getElementById("submitSearch").onclick = function() {
     pokemon = document.getElementById("textSearch").value
 

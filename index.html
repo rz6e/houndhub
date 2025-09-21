@@ -17,7 +17,12 @@
         <h1 id="title">COBBLEVERSE POKEMON <span>&nbsp;SEARCHER</span></h1>
 
         <div class="searchBox">
-            <input type="text" id="textSearch" name="fname" placeholder="Enter Pokemon name...">
+
+                <datalist id="pokeList">
+                </datalist>
+
+            <input type="text" id="textSearch" name="fname" list="pokeList" placeholder="Enter Pokemon name...">
+            
             <button type="button" id="submitSearch">Submit</button>
         </div>
     </div>
