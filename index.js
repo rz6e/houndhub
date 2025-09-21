@@ -1,8 +1,10 @@
 let pokemon;
 
 document.getElementById("submitSearch").onclick = function() {
-    pokemon = document.getElementById("textSearch").value;
-    console.log(pokemon);
+    pokemon = document.getElementById("textSearch").value.toLowerCase();
+    pokemon = pokemon.charAt(0).toUpperCase() + pokemon.slice(1)
+
+    console.log(pokemon)
 
     uppers = {
         "pack":"Pack",
@@ -54,7 +56,7 @@ document.getElementById("submitSearch").onclick = function() {
                 const heading = document.getElementsByName("classification")[0];
                 if (!heading) continue;
 
-                heading.innerHTML = `"Classification": ` + ` <span id="legendary">&nbsp;LEGENDARY</span>`;
+                heading.innerHTML = `Classification: ` + ` <span id="legendary">&nbsp;LEGENDARY</span>`;
 
                 ismythical = true
             }
@@ -104,8 +106,7 @@ document.getElementById("submitSearch").onclick = function() {
         try{
 
             const pokemonName = pokemon.toLowerCase();
-
-            console.log(pokemonName)
+            
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
             if(!response.ok){

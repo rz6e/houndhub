@@ -11,61 +11,43 @@
 </head>
 <body>
 
-    <div id="searchContainer">
-        <h1 id="text">COBBLEVERSE POKEMON <span>&nbsp;SEARCHER</span></h1>
+    <!--  -->
 
-        <input type="text" id="textSearch" name="fname">
-        <button for="fname" type="button" id="submitSearch">Submit</button>
+    <div id="searchContainer">
+        <h1 id="title">COBBLEVERSE POKEMON <span>&nbsp;SEARCHER</span></h1>
+
+        <div class="searchBox">
+            <input type="text" id="textSearch" name="fname" placeholder="Enter Pokemon name...">
+            <button type="button" id="submitSearch">Submit</button>
+        </div>
     </div>
 
-    <div id="image"> <img id="mainImage" src=""></div>
+
+    <!--  -->
+
+
+    <div id="image">
+        <img id="mainImage" src="" alt="Pokemon Image">
+    </div>
 
     <div id="infoContainer">
 
-
-        <div id="column">
-        
-            <div>
-                <h1 name="pack" id="text">Pack:</h1>
-            </div>
-
-            <div>
-                <h1 name="spawn" id="text">Spawn:</h1>
-            </div>
-
-            <div>
-                <h1 name="rarity" id="text">Rarity:</h1>
-            </div>
-
-            <div>
-                <h1 name="classification" id="text">Classification: </h1>
-            </div>
-
-            <div>
-                <h1 name="condition" id="text">Condition:</h1>
-            </div>
-
+        <div class="column">
+            <h1 name="pack" class="infoText">Pack:</h1>
+            <h1 name="spawn" class="infoText">Spawn:</h1>
+            <h1 name="rarity" class="infoText">Rarity:</h1>
+            <h1 name="classification" class="infoText">Classification:</h1>
+            <h1 name="condition" class="infoText">Condition:</h1>
         </div>
 
-            <div id="column">
-        
-            <div>
-                <h1 name="time" id="text">Time:</h1>
-            </div>
-
-            <div>
-                <h1 name="weather" id="text">Weather:</h1>
-            </div>
-
-            <div>
-                <h1 name="context" id="text">Context:</h1>
-            </div>
-
-            <div>
-                <h1 name="forms" id="text">Forms:</h1>
-            </div>
-
+        <div class="column">
+            <h1 name="time" class="infoText">Time:</h1>
+            <h1 name="weather" class="infoText">Weather:</h1>
+            <h1 name="context" class="infoText">Context:</h1>
+            <h1 name="forms" class="infoText">Forms:</h1>
         </div>
+
+        <!--  -->
 
     </div>
 
@@ -74,6 +56,5 @@
     </a>
 
     <script src="index.js"></script>
-    
 </body>
 </html>
