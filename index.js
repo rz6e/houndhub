@@ -24,6 +24,11 @@ document.getElementById("submitSearch").onclick = function() {
         for (let d of data) {
             if (d[pokemon]) {
                 list = d[pokemon];
+
+                const imgElement = document.getElementById("mainImage");
+
+                imgElement.src = d[pokemon].image;
+                imgElement.style.display = "block";
             }
         }
 
@@ -33,6 +38,16 @@ document.getElementById("submitSearch").onclick = function() {
         }
 
         for (let [key, value] of Object.entries(list)) {
+
+            if(key == "types"){
+                const heading = document.getElementsByName(key)[0]
+
+                heading.innerHTML = `Types: ` + ` <span style="color: ${value.color};">&nbsp;${value.types}</span>`
+
+                console.log(value)
+
+                continue
+            }
 
             const heading = document.getElementsByName(key)[0];
             if (!heading) continue;
@@ -100,28 +115,28 @@ document.getElementById("submitSearch").onclick = function() {
     });
     
 
-    async function fetchData(){
+    // async function fetchData(){
 
-        try{
+    //     try{
 
-            const pokemonName = pokemon.toLowerCase();
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+    //         const pokemonName = pokemon.toLowerCase();
+    //         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
-            if(!response.ok){
-                throw new Error("Could not fetch resource");
-            }
+    //         if(!response.ok){
+    //             throw new Error("Could not fetch resource");
+    //         }
 
-            const data = await response.json();
-            const pokemonSprite = data.sprites.front_default;
-            const imgElement = document.getElementById("mainImage");
+    //         const data = await response.json();
+    //         const pokemonSprite = data.sprites.front_default;
+    //         const imgElement = document.getElementById("mainImage");
 
-            imgElement.src = pokemonSprite;
-            imgElement.style.display = "block";
-        }
-        catch(error){
-            console.error(error);
-        }
-    }
+    //         imgElement.src = pokemonSprite;
+    //         imgElement.style.display = "block";
+    //     }
+    //     catch(error){
+    //         console.error(error);
+    //     }
+    // }
 
     fetchData()
 };
