@@ -2,9 +2,6 @@ let pokemon;
 
 document.getElementById("submitSearch").onclick = function() {
     pokemon = document.getElementById("textSearch").value.toLowerCase();
-    pokemon = pokemon.charAt(0).toUpperCase() + pokemon.slice(1)
-
-    console.log(pokemon)
 
     uppers = {
         "pack":"Pack",
@@ -106,7 +103,6 @@ document.getElementById("submitSearch").onclick = function() {
         try{
 
             const pokemonName = pokemon.toLowerCase();
-            
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
             if(!response.ok){
