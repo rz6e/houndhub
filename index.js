@@ -1,7 +1,9 @@
 let pokemon;
 
 document.getElementById("submitSearch").onclick = function() {
-    pokemon = document.getElementById("textSearch").value.toLowerCase();
+    pokemon = document.getElementById("textSearch").value
+
+    console.log(pokemon)
 
     uppers = {
         "pack":"Pack",
