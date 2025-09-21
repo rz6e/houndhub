@@ -34,6 +34,14 @@ span{
     color: rgb(214, 88, 88);
 }
 
+#mythical{
+    color: rgb(201, 69, 227);
+}
+
+#legendary{
+    color: rgb(227, 214, 69);
+}
+
 #searchContainer{
     width: 40px;
     margin-top: 8%;
@@ -99,7 +107,7 @@ span{
 }
 
 #image {
-    margin-left: 37%;
+    margin-left: 38%;
     width: 5px;
     height: 5px;
 }

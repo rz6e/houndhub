@@ -1,0 +1,34 @@
+[
+    {
+  "Mew": { "generation": 1, "type": "Psychic" },
+
+  "Celebi": { "generation": 2, "type": "Psychic/Grass" },
+
+  "Jirachi": { "generation": 3, "type": "Steel/Psychic" },
+  "Deoxys": { "generation": 3, "type": "Psychic" },
+
+  "Phione": { "generation": 4, "type": "Water" },
+  "Manaphy": { "generation": 4, "type": "Water" },
+  "Darkrai": { "generation": 4, "type": "Dark" },
+  "Shaymin": { "generation": 4, "type": "Grass" },
+  "Arceus": { "generation": 4, "type": "Normal" },
+
+  "Victini": { "generation": 5, "type": "Psychic/Fire" },
+  "Keldeo": { "generation": 5, "type": "Water/Fighting" },
+  "Meloetta": { "generation": 5, "type": "Normal/Psychic" },
+  "Genesect": { "generation": 5, "type": "Bug/Steel" },
+
+  "Diancie": { "generation": 6, "type": "Rock/Fairy" },
+  "Hoopa": { "generation": 6, "type": "Psychic/Ghost" },
+  "Volcanion": { "generation": 6, "type": "Fire/Water" },
+
+  "Magearna": { "generation": 7, "type": "Steel/Fairy" },
+  "Marshadow": { "generation": 7, "type": "Fighting/Ghost" },
+  "Zeraora": { "generation": 7, "type": "Electric" },
+
+  "Meltan": { "generation": 8, "type": "Steel" },
+  "Melmetal": { "generation": 8, "type": "Steel" },
+  "Zarude": { "generation": 8, "type": "Dark/Grass" }
+}
+
+]

@@ -32,17 +32,71 @@ document.getElementById("submitSearch").onclick = function() {
         }
 
         for (let [key, value] of Object.entries(list)) {
-            console.log(key, value);
 
             const heading = document.getElementsByName(key)[0];
             if (!heading) continue;
 
-            // Option 1: use innerHTML
             heading.innerHTML = `${uppers[key]}: ` + ` <span>&nbsp;${value}</span>`;
 
         }
     });
 
+    let ismythical = false
+
+    fetch("./legendaries.json")
+    .then(res => res.json())
+    .then(data => {
+        let list;
+
+        for (let d of data) {
+            if (d[pokemon]) {
+            
+                const heading = document.getElementsByName("classification")[0];
+                if (!heading) continue;
+
+                heading.innerHTML = `"Classification": ` + ` <span id="legendary">&nbsp;LEGENDARY</span>`;
+
+                ismythical = true
+            }
+
+            else {
+                ismythical = false
+            }
+        }
+
+        if (!list) {
+            console.log("No match found");
+            return;
+        }
+    });
+
+    fetch("./mythicals.json")
+    .then(res => res.json())
+    .then(data => {
+        let list;
+
+        for (let d of data) {
+            if (d[pokemon]) {
+
+                const heading = document.getElementsByName("classification")[0];
+                if (!heading) continue;
+
+                heading.innerHTML = `Classification: ` + ` <span id="mythical">&nbsp;MYTHICAL</span>`;
+
+            }
+
+            else{
+                if (document.getElementsByName("classification")[0].innerHTML != "Classification: " && !ismythical) {
+                document.getElementsByName("classification")[0].innerHTML = "Classification: "
+                }
+            }
+        }
+
+        if (!list) {
+            console.log("No match found");
+            return;
+        }
+    });
     
 
     async function fetchData(){
