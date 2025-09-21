@@ -68,7 +68,7 @@
   "Enamorus": { "generation": 8, "type": "Fairy/Flying", "group": "Forces of Nature" },
 
   "Wo-Chien": { "generation": 9, "type": "Dark/Grass", "group": "Treasures of Ruin" },
-  "Chien-Pao": { "generation": 9, "type": "Dark/Ice", "group": "Treasures of Ruin" },
+  "ChienPao": { "generation": 9, "type": "Dark/Ice", "group": "Treasures of Ruin" },
   "Ting-Lu": { "generation": 9, "type": "Dark/Ground", "group": "Treasures of Ruin" },
   "Chi-Yu": { "generation": 9, "type": "Dark/Fire", "group": "Treasures of Ruin" },
   "Koraidon": { "generation": 9, "type": "Fighting/Dragon", "group": "Paradox Cyclizar Duo" },
