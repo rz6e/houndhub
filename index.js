@@ -164,5 +164,5 @@ document.getElementById("submitSearch").onclick = function() {
     //     }
     // }
 
-    fetchData()
+    // fetchData()
 };
